@@ -1,63 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Burst</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Burst</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet">
+  <!-- tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
           }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <style>
-        .font-lato{
-          font-family: 'Inter', sans-serif;
-          font-family: 'Lato', sans-serif;
-        }
-      </style>
-      <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .font-lato {
+      font-family: 'Inter', sans-serif;
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
 </head>
+
 <body class="font-lato">
-    <header class="container mx-auto">
-      <!-- navbar section -->
-      <nav class="flex justify-between items-center bg-[#F85559] rounded-full px-12 py-8 mt-12">
-        <!-- one -->
-        <div class="flex space-x-7 text-white font-bold text-lg">
-          <a href="home">Home</a>
-          <a href="about us">About Us</a>
-          <a href="shop">Shop</a>
-          <a href="all fruits">All Fruits</a>
+  <header class="container mx-auto">
+    <!-- navbar section -->
+    <nav
+      class="flex flex-col md:flex-col gap-3 lg:flex-row  justify-between items-center md:bg-[#F85559] rounded-full px-12 py-8 mt-12">
+      <!-- one -->
+      <div class="hidden md:block flex space-x-7 text-white font-bold text-lg">
+        <a href="home">Home</a>
+        <a href="about us">About Us</a>
+        <a href="shop">Shop</a>
+        <a href="all fruits">All Fruits</a>
+      </div>
+      <!-- two -->
+      <div class="flex items-center gap-2">
+        <img src="./images/logo.png" alt="logo">
+        <h1 class="md:text-white font-bold text-[40px]">Fruit Burst</h1>
+      </div>
+      <!-- three -->
+      <div class="hidden md:block relative flex items-center">
+        <input class="rounded-full py-4 px-8" type="text" placeholder="Search here"><i
+          class="fa-solid fa-magnifying-glass absolute bottom-5 right-5 cursor-pointer"></i>
+      </div>
+    </nav>
+    <!-- banner section -->
+    <div class="carousel w-full my-14 rounded-lg h-max-[600px]">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="./images/banner1.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❮</a>
+          <a href="#slide2" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❯</a>
         </div>
-        <!-- two -->
-        <div class="flex items-center gap-2">
-          <img src="./images/logo.png" alt="logo">
-          <h1 class="text-white font-bold text-[40px]">Fruit Burst</h1>
+        <!-- middle -->
+        <div class="text-center py-2 absolute bg-transparent">
+          <h1 class="text-white text-7xl mb-3 font-extrabold text-center">Exotic tastes at your <br>doorstep</h1>
+          <p class="text-white text-xl mb-2 font-medium">We supply high quality organic products</p>
+          <button class="btn btn-error text-white bg-[#F85559] px-7">Shop Now</button>
         </div>
-        <!-- three -->
-        <div class="relative flex items-center">
-          <input class="rounded-full py-4 px-8" type="text" placeholder="Search here"><i class="fa-solid fa-magnifying-glass absolute right-4 cursor-pointer"></i>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="./images/banner2.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❮</a>
+          <a href="#slide3" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❯</a>
         </div>
-      </nav>
-    </header>
-    <main>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="./images/banner3.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❮</a>
+          <a href="#slide4" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="./images/banner4.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❮</a>
+          <a href="#slide1" class="btn btn-circle text-white text-sm bg-[#121212] border-none">❯</a>
+        </div>
+      </div>
+    </div>
+    <!-- title on slider -->
 
-    </main>
-    <footer>
-
-    </footer>
+  </header>
+  <main class="container mx-auto">
+    <!-- Deal section -->
+    <div>
+      
+    </div>
+  </main>
+  <!-- footer section -->
+  <footer class="footer footer-center p-20 bg-[#121212] text-white text-base-content rounded">
+    <div class="flex items-center gap-2">
+      <img src="./images/logo.png" alt="logo">
+      <h1 class="font-bold text-[40px]">Fruit Burst</h1>
+    </div>
+    <div class="grid grid-flow-col gap-4">
+      <a class="link link-hover">Home</a>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Shop</a>
+      <a class="link link-hover">All Fruits</a>
+      <a class="link link-hover">Support</a>
+      <a class="link link-hover">My Account</a>
+    </div>
+    <div>
+      <div class="grid grid-flow-col gap-5">
+        <img src="./images/twitter 1.png" alt="">
+        <img src="./images/facebook 1.png" alt="">
+        <img src="./images/Group 49.png" alt="">
+        <img src="./images/instagram 1.png" alt="">
+        <img src="./images/linkedin 1.png" alt="">
+        <img src="./images/apple 1.png" alt="">
+      </div>
+    </div>
+    <div>
+      <p>Copyright © 2023 - All right reserved by <a href="https://www.facebook.com/Mr.AmitKB/">Amit</a></p>
+    </div>
+  </footer>
 </body>
+
 </html>
